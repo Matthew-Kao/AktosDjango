@@ -2,11 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to My Project</title>
+    <title>Welcome to Aktos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #a6c0fe, #f68084);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        a {
+            color: #ffdd55;
+        }
+    </style>
 </head>
 <body>
-    <h1>Matthew Kao's Aktos Django Project</h1>
-    <p>This is the home page. the consumers_balances CSV data has been imported and the /accounts API is ready.</p>
+    <h1>Welcome to Aktos</h1>
+    <p>Aktos is the first and only modern collection software for debt collection agencies. Our API allows for flexible queries to manage account data effectively.</p>
+    <p>Explore the API and see all the available data by visiting the Accounts API:</p>
     <p><a href="/accounts/">View Accounts</a></p>
+    <h2>How to Test the API</h2>
+    <p>You can test the accounts API with 4 parameters, all of which are optional. Here are some examples of how to use these parameters:</p>
+    <ul>
+        <li><strong>Minimum Balance:</strong> <code>/accounts/?min_balance=100</code></li>
+        <li><strong>Maximum Balance:</strong> <code>/accounts/?max_balance=5000</code></li>
+        <li><strong>Consumer Name:</strong> <code>/accounts/?consumer_name=Matthew Kao</code></li>
+        <li><strong>Status:</strong> <code>/accounts/?status=active</code></li>
+        <li><strong>Combining Parameters:</strong> <code>/accounts/?min_balance=100&max_balance=5000&consumer_name=Matthew Kao&status=active</code></li>
+    </ul>
+    <p>The datastore used is the default SQLite database provided by Django.</p>
+    <p>To run tests, use the command <code>python manage.py test</code> in your terminal. The CSV data is automatically imported when the server starts, ensuring the database is ready for immediate testing.</p>
+    <h2>Admin Access</h2>
+    <p>For administrative purposes, use the following credentials:</p>
+    <ul>
+        <li>Username: matthewkao</li>
+        <li>Password: Mamamike1717</li>
+        <li>Email: matthewkao@berkeley.edu</li>
+    </ul>
 </body>
 </html>

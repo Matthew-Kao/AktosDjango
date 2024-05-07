@@ -21,6 +21,5 @@ from .views import AccountListView,home_view
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('accounts/', AccountListView.as_view(), name='accounts-list'),
-    path('', home_view, name='home'),
-    
+    path('', home_view, name='home'),  
 ]
